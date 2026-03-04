@@ -1,0 +1,827 @@
+@charset "utf-8";
+
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+
+  margin: 0;
+  font-family: serif;
+  font-family: "Montserrat", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+.wrapper {
+  display: flex;
+}
+
+
+
+
+/* 左 */
+
+.left {
+  width: 50%;
+  height: 100vh;
+  background: rgb(255, 255, 255);
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+
+/* 右 */
+
+.right {
+  width: 50%;
+  padding: 60px 60px 20px 60px;
+  background: #140049;
+  margin-left: 50%;
+  color: white;
+}
+
+
+
+/* 左のイラスト */
+
+
+.astro-wrapper {
+  position: absolute;
+  width: 800px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.astro svg {
+  width: 100%;
+  height: auto;
+}
+
+/* レスポンシブ */
+
+@media (max-width: 768px) {
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .wrapper {
+    display: block;
+    width: 100%;
+  }
+
+  .left {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+
+  .left-inner {
+    position: relative;
+    height: auto;
+    padding: 60px 20px;
+  }
+
+  .right {
+    width: 100%;
+    margin-left: 0;
+    padding: 20px;
+  }
+
+  .astro-wrapper {
+    position: relative;
+    width: 80%;
+    max-width: 300px;
+    margin: 0 auto;
+    transform: none;
+    top: auto;
+    left: auto;
+  }
+
+  .astro svg {
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+
+
+/* イラスト縦ゆらゆら */
+
+.astro {
+  width: 100%;
+  animation: float 6s ease-in-out infinite;
+}
+
+
+
+@keyframes float {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(-20px, -30px);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+
+@media (max-width: 768px) {
+
+  .astro {
+    width: 100%;
+    animation: float 6s ease-in-out infinite;
+  }
+
+
+
+  @keyframes float {
+    0% {
+      transform: translate(0, 0);
+    }
+
+    50% {
+      transform: translate(-10px, -10px);
+    }
+
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+
+}
+
+
+/* イラスト足ゆらゆら */
+
+.leg-left {
+  transform-origin: top center;
+  animation: legSwing 3s ease-in-out infinite;
+}
+
+.leg-right {
+  transform-origin: top center;
+  animation: legSwing 3s ease-in-out infinite reverse;
+
+}
+
+
+@keyframes legSwing {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(1.5deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+
+
+/* 足の軸 */
+
+.leg-right,
+.leg-right {
+  transform-box: fill-box;
+  transform-origin: top center;
+
+}
+
+
+/* 犬の耳ゆらゆら */
+
+.ear-left {
+  transform-origin: top center;
+  animation: earFlap 3s ease-in-out infinite;
+}
+
+
+.ear-right {
+  transform-origin: top center;
+  animation: earFlap 3s ease-in-out infinite reverse;
+}
+
+@keyframes earFlap {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(12deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/* 犬の耳軸 */
+
+.ear-left,
+.ear-right {
+  transform-box: fill-box;
+  transform-origin: top center;
+  animation: earFlap 4s ease-in-out infinite;
+}
+
+
+/* ヘッダー */
+
+.right ul {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+
+.right li {
+  font-size: 28px;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+}
+
+.right li a:hover {
+  transition: .4s;
+  color: #ff7316;
+}
+
+.right li a {
+  transition: .4s;
+}
+
+/* メインビジュアル */
+
+.top {
+  display: flex;
+  justify-content: center;
+}
+
+.top h1 {
+  font-family: "Kodchasan", sans-serif;
+  font-size: clamp(40px, 10vw, 110px);
+  font-weight: 700;
+  color: white;
+  font-style: italic;
+  margin: 110px 0 200px;
+}
+
+span {
+  color: #ff7316;
+}
+
+
+@media (max-width: 768px) {
+
+  .top h1 {
+    font-size: 48px;
+    margin: 60px 0 100px;
+    text-align: center;
+    line-height: 1.2;
+    word-break: break-word;
+  }
+
+  .right a {
+    font-size: 14px;
+  }
+
+  .right ul {
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+  }
+
+}
+
+
+/* スキルセクション */
+
+
+section h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 70px;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 200px;
+  color: #ff7316;
+}
+
+.sub-title {
+  font-size: 16px;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 2px;
+}
+
+section h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  color: #ff7316;
+
+}
+
+.skill-box {
+  margin-top: 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.circle {
+  height: 520px;
+  width: 520px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: black;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+
+  opacity: 0;
+  transform: translateY(40px) scale(0.9);
+  filter: blur(6px);
+  transition: 0.8s ease;
+
+}
+
+.circle.show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  filter: blur(0);
+}
+
+.circle img {
+  width: 230px;
+  margin-bottom: 20px;
+}
+
+
+.circle:nth-last-child(odd) {
+  align-self: flex-end;
+}
+
+.circle:nth-last-child(even) {
+  align-self: flex-start;
+}
+
+
+
+@media (max-width: 768px) {
+
+
+  section h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+
+  .circle {
+    width: 280px;
+    height: 280px;
+    font-size: 10px;
+  }
+
+  .frame {
+    width: 100%;
+    height: auto;
+  }
+
+  .circle img {
+    width: 100px;
+    margin-bottom: 14px;
+
+  }
+
+
+
+
+}
+
+
+
+
+/* ワークスセクション */
+
+
+
+.frame {
+  width: 100%;
+  max-width: 650px;
+  height: 500px;
+  background: white;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+
+  transition: transform 0.3s cubic-bezier(.34, 1.56, .64, 1)
+}
+
+.frame:hover {
+  transform: scale(1.08);
+
+}
+
+.work-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  margin-top: 100px;
+  color: black;
+  flex-direction: column;
+}
+
+.frame img {
+  width: 80%;
+  aspect-ratio: 5 / 3;
+  object-fit: cover;
+  border-radius: 28px;
+}
+
+.work-item h4 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 30px;
+}
+
+.work-item-text {
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 12px;
+
+}
+
+.container p {
+  width: 100%;
+  max-width: 400px;
+  line-height: 1.5;
+}
+
+
+.modalOpen {
+
+  /* display: none; */
+
+}
+
+
+
+.modal {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(17, 17, 17, 0.815);
+  z-index: 10;
+
+}
+
+.modal-content {
+  background-color: #f4f4f4;
+  margin: 8% auto;
+  width: 50%;
+  box-shadow: 0 2px 7px black;
+  border-radius: 16px;
+  height: 600px;
+  overflow-y: auto;
+  animation-name: popup;
+  animation-duration: 1s;
+
+}
+
+@keyframes popup {
+  from {
+    transform: translateY(150%);
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+
+  }
+
+}
+
+.modal-header {
+  padding: 20px 30px;
+  background: #140049;
+  display: flex;
+  justify-content: space-between;
+
+
+}
+
+.modal-header h1 {
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: 700;
+  margin: 10px 0;
+
+}
+
+.modalClose {
+  font-size: 1.8rem;
+  cursor: pointer;
+  margin-top: 10px;
+
+}
+
+/* モーダル中身 */
+
+.modal-body {
+
+  padding: 30px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-body img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+
+}
+
+
+.modal-inner {
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 0 10px;
+
+}
+
+.modal-inner-1 .modal-title {
+  font-size: 20px;
+  margin-top: 28px;
+  font-weight: 600;
+}
+
+.modal-inner-1 .modal-period {
+    font-size: 14px;
+    margin-top: 12px;
+}
+
+.modal-inner-1 .modal-text {
+  font-size: 14px;
+  margin-top: 3px;
+}
+
+
+.modal-inner-2 .modal-title {
+  font-size: 20px;
+  margin-top: 28px;
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+.modal-inner-2 .modal-period {
+  font-size: 14px;
+  margin-top: 12px;
+
+}
+
+.modal-inner-2 img:not(:first-child) {
+  margin-top: 150px;
+}
+
+
+.modal-inner-3 .modal-title {
+  font-size: 20px;
+  margin-top: 28px;
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+.modal-inner-3 .modal-period {
+  font-size: 14px;
+  margin-top: 5px;
+
+}
+
+
+.modal-inner-3 img {
+  margin-top: 80px;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+
+.modal-inner-4 .modal-title {
+  font-size: 20px;
+  margin-top: 28px;
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+.modal-inner-4 .modal-period {
+  font-size: 14px;
+  margin-top: 5px;
+
+}
+
+
+.modal-inner-4 img {
+  margin-top: 80px;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+}
+
+
+
+
+
+@media (max-width: 768px) {
+
+  .modal-content {
+    width: 90%;
+    height: auto;
+  }
+
+  .modal-inner {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .frame {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+  }
+
+  .frame img {
+    margin-top: 10px;
+  }
+
+  .work-item h4 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 12px;
+  }
+
+  .work-item-text {
+    font-size: 8px;
+    font-weight: 500;
+    margin-top: 8px;
+
+  }
+
+  .frame {
+    height: 300px;
+  }
+
+  .work-item {
+    gap: 40px;
+
+  }
+}
+
+
+
+/* アバウトセクション */
+
+.about-box {
+  display: flex;
+  gap: 50px;
+  margin-top: 100px;
+
+}
+
+.About-img {
+  background-image: url(../images/タイルレイアウト.jpg);
+  background-position: center;
+  background-size: cover;
+  height: auto;
+  border-radius: 20px;
+}
+
+.colum {
+  width: 48%;
+  display: flex;
+flex-direction: column;
+}
+
+.name-furigana {
+  font-size: clamp(24px, 5vw, 40px);
+  font-weight: 700;
+
+  font-family: "Montserrat", sans-serif;
+
+}
+
+
+.name-kanzi {
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+  margin-top: 10px;
+  letter-spacing: 1px;
+}
+
+.about-text {
+  margin-top: 20px;
+  font-size: 14px;
+  line-height: 1.8;
+  font-family: "Montserrat", sans-serif;
+}
+
+
+@media (max-width: 768px) {
+  .about-box {
+    display: flex;
+    flex-direction: column;
+
+
+  }
+
+  .colum {
+    width: 100%;
+
+  }
+
+}
+
+
+/* コンタクトセクション */
+
+.contact-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+
+#Contact a {
+  font-size: clamp(24px, 5vw, 42px);
+  font-weight: 700;
+  transition: 0.3s ease-out;
+
+}
+
+#Contact {
+  margin-bottom: 150px;
+}
+
+
+#Contact a:hover {
+  transform: scale(1.05);
+  transition: 0.3s ease-out;
+}
+
+
+footer {
+  color: white;
+  text-align: center;
+  font-size: 12px;
+
+}
+
+@media (max-width: 768px) {
+
+  #Contact a {
+    font-size: 24px;
+  }
+
+  .name-furigana {
+    font-size: 26px;
+  }
+
+}

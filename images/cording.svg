@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_1" data-name="レイヤー 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 962.79 780.45">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke-width: 20px;
+      }
+
+      .cls-1, .cls-2 {
+        fill: none;
+        stroke: #231815;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .cls-2 {
+        stroke-width: 30px;
+      }
+    </style>
+  </defs>
+  <rect class="cls-2" x="15" y="15" width="932.79" height="659.02" rx="119.71" ry="119.71"/>
+  <line class="cls-2" x1="20.14" y1="534.47" x2="942.64" y2="534.47"/>
+  <circle class="cls-1" cx="481.39" cy="604.24" r="23.47"/>
+  <g>
+    <line class="cls-2" x1="293.24" y1="127.75" x2="121.11" y2="276.93"/>
+    <line class="cls-2" x1="270.29" y1="449.06" x2="121.11" y2="276.93"/>
+  </g>
+  <line class="cls-2" x1="669.55" y1="126.56" x2="841.68" y2="275.74"/>
+  <line class="cls-2" x1="692.5" y1="447.87" x2="841.68" y2="275.74"/>
+  <line class="cls-2" x1="536.31" y1="151.97" x2="426.48" y2="422.46"/>
+  <rect class="cls-2" x="314.18" y="674.02" width="334.43" height="91.44"/>
+  <line class="cls-2" x1="120.48" y1="765.45" x2="842.3" y2="765.45"/>
+</svg>
