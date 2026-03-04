@@ -731,29 +731,29 @@ section h3 {
   display: flex;
   gap: 50px;
   margin-top: 100px;
+  align-items: center;
 
 }
 
-.About-img {
-  background-image: url(../images/kao.png);
-  background-position: center;
-  background-size: cover;
-  height: 420px;
-  border-radius: 20px;
+.about-img {
+  width: 400px;
+  height: 350px;
+
 }
 
 .colum {
-  width: 80%;
+  width: 50%;
   display: flex;
   flex-direction: column;
+
 
 }
 
 .name-furigana {
   font-size: clamp(24px, 5vw, 40px);
   font-weight: 700;
-font-family: "Montserrat", sans-serif;
-margin-top: 50px;
+  font-family: "Montserrat", sans-serif;
+  margin-top: 50px;
 
 }
 
@@ -784,6 +784,13 @@ margin-top: 50px;
   .colum {
     width: 100%;
 
+  }
+
+  @media (max-width: 768px) {
+    .about-img {
+      width: 100%;
+      height: auto;
+    }
   }
 
 }
