@@ -625,6 +625,13 @@ section h3 {
 }
 
 
+.modal-inner-2 img {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+}
+
+
 .modal-inner-3 .modal-title {
   font-size: 20px;
   margin-top: 28px;
@@ -728,15 +735,15 @@ section h3 {
 }
 
 .About-img {
-  background-image: url(../images/タイルレイアウト.jpg);
+  background-image: url(../images/kao.png);
   background-position: center;
   background-size: cover;
-  height: auto;
+  height: 420px;
   border-radius: 20px;
 }
 
 .colum {
-  width: 48%;
+  width: 80%;
   display: flex;
   flex-direction: column;
 
@@ -745,8 +752,8 @@ section h3 {
 .name-furigana {
   font-size: clamp(24px, 5vw, 40px);
   font-weight: 700;
-
-  font-family: "Montserrat", sans-serif;
+font-family: "Montserrat", sans-serif;
+margin-top: 50px;
 
 }
 
