@@ -50,7 +50,7 @@ body {
 
 .astro-wrapper {
   position: absolute;
-  width: 700px;
+  width: 720px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -328,9 +328,8 @@ section h2 {
 
 section h3 {
   font-family: "Montserrat", sans-serif;
-  font-size: 32px;
+  font-size: 26px;
   font-weight: 700;
-  margin-bottom: 8px;
   color: #ff7316;
 
 }
@@ -339,7 +338,6 @@ section h3 {
   margin-top: 120px;
   display: flex;
   flex-direction: column;
-  gap: 40px;
 }
 
 .circle {
@@ -353,7 +351,6 @@ section h3 {
   align-items: center;
   text-align: center;
   color: black;
-  font-size: 14px;
   font-weight: 500;
   font-family: "Montserrat", sans-serif;
 
@@ -364,6 +361,22 @@ section h3 {
 
 }
 
+
+.circle .skill-content {
+  font-size: 16px;
+  margin-top: 8px;
+  font-weight: 700;
+}
+
+.circle .skill-text {
+  font-size: 13px;
+  margin-top: 6px;
+  line-height: 1.3;
+
+}
+
+
+
 .circle.show {
   opacity: 1;
   transform: translateY(0) scale(1);
@@ -372,7 +385,7 @@ section h3 {
 
 .circle img {
   width: 150px;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 
 
@@ -390,14 +403,12 @@ section h3 {
 
 
   section h3 {
-    font-size: 20px;
-    margin-bottom: 5px;
+    font-size: 18px;
   }
 
   .circle {
     width: 280px;
     height: 280px;
-    font-size: 10px;
   }
 
   .frame {
@@ -407,9 +418,20 @@ section h3 {
 
   .circle img {
     width: 100px;
-    margin-bottom: 14px;
+    margin-bottom: 8px;
 
   }
+
+    .circle .skill-content {
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .circle .skill-text {
+      font-size: 8px;
+      margin-top: 6px;
+
+    }
 
 
 
@@ -465,6 +487,7 @@ section h3 {
   font-weight: 700;
   margin-top: 30px;
 }
+
 
 .work-item-text {
   font-size: 14px;
@@ -536,7 +559,7 @@ section h3 {
 
 }
 
-.modal-header h1 {
+.modal-header h4 {
   color: #ffffff;
   font-size: 30px;
   font-weight: 700;
@@ -577,90 +600,64 @@ section h3 {
 
 }
 
-.modal-inner-1 .modal-title {
-  font-size: 20px;
-  margin-top: 28px;
-  font-weight: 600;
+.modal-inner .modal-title {
+  font-size: 18px;
+  margin: 26px 0 10px;
+  font-weight: 00;
 }
 
-.modal-inner-1 .modal-period {
+.modal-inner .modal-item {
   font-size: 14px;
-  margin-top: 12px;
-}
-
-.modal-inner-1 .modal-text {
-  font-size: 14px;
-  margin-top: 3px;
+    margin-top: 3px;
 }
 
 
-.modal-inner-2 .modal-title {
-  font-size: 20px;
-  margin-top: 28px;
-  line-height: 1.5;
-  font-weight: 600;
+.modal-inner .modal-item-text {
+    font-size: 14px;
 }
 
-.modal-inner-2 .modal-period {
-  font-size: 14px;
-  margin-top: 12px;
+
+.modal-inner .modal-item-text+.modal-item-text {
+  margin-top: 14px;
 
 }
 
-.modal-inner-2 img:not(:first-child) {
+
+.modal-inner img:not(:first-child) {
   margin-top: 150px;
 }
 
+.baner-photo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 
-.modal-inner-2 img {
+
+}
+
+.baner-photo img {
   width: 100%;
-  max-width: 700px;
+  max-width: 450px;
   height: auto;
 }
 
 
-.modal-inner-3 .modal-title {
-  font-size: 20px;
-  margin-top: 28px;
-  line-height: 1.5;
-  font-weight: 600;
-}
+.illust-photo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 
-.modal-inner-3 .modal-period {
-  font-size: 14px;
-  margin-top: 5px;
 
 }
 
-
-.modal-inner-3 img {
-  margin-top: 80px;
-  width: 100%;
-  max-width: 400px;
-  height: auto;
-}
-
-.modal-inner-4 .modal-title {
-  font-size: 20px;
-  margin-top: 28px;
-  line-height: 1.5;
-  font-weight: 600;
-}
-
-.modal-inner-4 .modal-period {
-  font-size: 14px;
-  margin-top: 5px;
+.illust-photo img {
+    width: 100%;
+      max-width: 500px;
+      height: auto;
 
 }
-
-
-.modal-inner-4 img {
-  margin-top: 80px;
-  width: 100%;
-  max-width: 500px;
-  height: auto;
-}
-
 
 
 
@@ -755,12 +752,12 @@ section h3 {
 .name-kanzi {
   font-size: 20px;
   font-family: "Montserrat", sans-serif;
-  margin-top: 10px;
+  margin-top: 6px;
   letter-spacing: 1px;
 }
 
 .about-text {
-  margin-top: 20px;
+  margin-top: 16px;
   font-size: 14px;
   line-height: 1.8;
   font-family: "Montserrat", sans-serif;
